@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partial Embed without Header</title>
     <style>
-        body {
+      body {
             margin: 0;
             height: 100vh;
-            overflow: hidden;
+            overflow: hidden; /* Disable scrolling on the body */
         }
         iframe {
             position: absolute;
@@ -17,6 +17,10 @@
             width: 100%;
             height: 30vh; /* Adjusted height to show the remaining 80% */
             border: none;
+            pointer-events: none; /* Optional: disables interaction */
+            overflow: hidden; /* Disable scrolling inside the iframe */
+            -ms-overflow-style: none;  /* Disable scrolling for IE */
+            scrollbar-width: none; /* Disable scrollbar for Firefox */
             pointer-events: none; /* Optional: disables interaction */
         }
     </style>
